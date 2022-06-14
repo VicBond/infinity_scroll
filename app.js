@@ -21,7 +21,7 @@ function displayPhotos() {
     const img = document.createElement('img');
     img.setAttribute('src', photo.urls.regular);
     img.setAttribute('alt', photo.alt_description);
-    img.setAttribute('alt', photo.alt_description);
+    img.setAttribute('title', photo.alt_description);
 
   });
 }
