@@ -17,6 +17,12 @@ function displayPhotos() {
     item.setAttribute('href', photo.links.html);
     item.setAttribute('target', '_blank');
     
+    // create <img> for photo
+    const img = document.createElement('img');
+    img.setAttribute('src', photo.urls.regular);
+    img.setAttribute('alt', photo.alt_description);
+    img.setAttribute('alt', photo.alt_description);
+
   });
 }
 
