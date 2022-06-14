@@ -10,7 +10,14 @@ const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&coun
 
 //create elements for links and photos => add to DOM
 function displayPhotos() {
-
+//run function for each object in photos array
+  photosArray.forEach(photo => {
+    // create <a> to link to usplash
+    const item = document.createElement('a');
+    item.setAttribute('href', photo.links.html);
+    item.setAttribute('target', '_blank');
+    
+  });
 }
 
 //fetch photos from unsplash
