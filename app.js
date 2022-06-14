@@ -23,6 +23,9 @@ function displayPhotos() {
     img.setAttribute('alt', photo.alt_description);
     img.setAttribute('title', photo.alt_description);
 
+    //put imga tag inside a tag and then put both tags inside the imageContainer element
+    item.appendChild(img);
+    imageContainer.appendChild(item);
   });
 }
 
