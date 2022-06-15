@@ -59,6 +59,12 @@ async function getPhotos(){
   }
 }
 
+// check ti see if scroll near bottom of page
+
+window.addEventListener('scroll', () => {
+  
+})
+
 
 //on load
 
