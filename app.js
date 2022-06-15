@@ -59,10 +59,12 @@ async function getPhotos(){
   }
 }
 
-// check ti see if scroll near bottom of page
+// check to see if scroll near bottom of page
 
 window.addEventListener('scroll', () => {
-  
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000) {
+    getPhotos();
+  }
 })
 
 
