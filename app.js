@@ -13,8 +13,9 @@ const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&coun
 
 // check if all images were loaded
 function imageLoaded() {
-  console.log('image loaded');
   imagesLoaded ++;
+  console.log(imagesLoaded);
+
   if (imagesLoaded === totalImages) {
     ready = true;
     console.log('ready =', ready);
@@ -31,6 +32,7 @@ function setAttributes(el, attr) {
 
 //create elements for links and photos => add to DOM
 function displayPhotos() {
+  imagesLoaded = 0;
   totalImages = photosArray.length;
   console.log('total images: ' + totalImages);
 //run function for each object in photos array
