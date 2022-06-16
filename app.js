@@ -14,11 +14,9 @@ const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&coun
 // check if all images were loaded
 function imageLoaded() {
   imagesLoaded ++;
-  console.log(imagesLoaded);
-
   if (imagesLoaded === totalImages) {
     ready = true;
-    console.log('ready =', ready);
+    loader.hidden = true;
   }
 }
 
@@ -34,7 +32,7 @@ function setAttributes(el, attr) {
 function displayPhotos() {
   imagesLoaded = 0;
   totalImages = photosArray.length;
-  console.log('total images: ' + totalImages);
+
 //run function for each object in photos array
   photosArray.forEach((photo) => {
     // create <a> to link to usplash
